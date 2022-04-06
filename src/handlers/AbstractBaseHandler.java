@@ -1,5 +1,5 @@
 package handlers;
 
-public class AbstractBaseHandler {
+public abstract class AbstractBaseHandler {
 
 }
