@@ -1,9 +1,18 @@
 package edu.ou.cs2334.project4;
 
+import org.graalvm.compiler.phases.common.NodeCounterPhase.Stage;
+
 public class Main {
+	
+	private static int IDX_NUM_COLS = 0;
+	private static int IDX_NUM_ROWS = 1;
+	private static int IDX_CELL_SIZE = 2;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		public void start(Stage primaryStage) {
+			
+		}
 
 	}
 
