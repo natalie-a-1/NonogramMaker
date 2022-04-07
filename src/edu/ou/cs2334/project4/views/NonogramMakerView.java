@@ -1,4 +1,4 @@
-package views;
+package edu.ou.cs2334.project4.views;
 
 import java.awt.MenuBar;
 import java.awt.MenuItem;
