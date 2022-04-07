@@ -1,8 +1,8 @@
-package handlers;
+package edu.ou.cs2334.project4.handlers;
 
 import java.awt.event.ActionEvent;
 
-import models.NonogramMakerModel;
+import edu.ou.cs2334.project4.models.NonogramMakerModel;
 
 public class ToggleButtonEventHandler {
 	
