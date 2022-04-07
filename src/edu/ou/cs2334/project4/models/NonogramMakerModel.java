@@ -1,7 +1,9 @@
-package models;
+package edu.ou.cs2334.project4.models;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class NonogramMakerModel {
 	
@@ -12,11 +14,15 @@ public class NonogramMakerModel {
 	private boolean[] grid;
 	
 	public NonogramMakerModel(int numRows, int numColumns) {
-		
+		this.numColumns = numColumns;
+		this.numRows = numRows;
+		this.grid = new boolean[this.numColumns + this.numRows];
 	}
 	
 	public NonogramMakerModel(File file) {
-
+		Scanner scan = new Scanner(file);
+		int rows = scan.nextInt();
+		int cols = scan.nextInt();
 	}
 	
 	public NonogramMakerModel(String filename) {
@@ -24,7 +30,7 @@ public class NonogramMakerModel {
 	}
 	
 	public boolean[] getGrid() {
-		
+		return Arrays.copyOf(grid, grid.length);
 	}
 	
 	public boolean getCell(int rowIdx, int colIdx) {
