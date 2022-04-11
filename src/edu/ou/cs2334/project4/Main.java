@@ -1,5 +1,6 @@
 package edu.ou.cs2334.project4;
 
+import javafx.stage.Stage;
 
 public class Main {
 	
@@ -9,9 +10,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		public void start(Stage primaryStage) {
-			
-		}
+		public void start(Stage primaryStage;
 
 	}
 
