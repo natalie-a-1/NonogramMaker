@@ -51,11 +51,11 @@ public class NonogramMakerModel {
 	}
 
 	public boolean getCell(int rowIdx, int colIdx) {
-		return grid[rowIdx + colIdx];
+		return grid[(numColumns * rowIdx + colIdx)];
 	}
 
 	public void setCell(int rowIdx, int colIdx, boolean state) {
-		grid[rowIdx + colIdx] = state;
+		grid[(numColumns * rowIdx + colIdx)] = state;
 	}
 
 	public int getNumRows() {
@@ -79,7 +79,9 @@ public class NonogramMakerModel {
 	}
 
 	public List<Integer> projectRow(int rowIdx) {
-
+		for (int i = 0; i < grid.length; i++) {
+			grid.
+		}
 	}
 
 	public List<Integer> projectCol(int colIdx) {
@@ -91,6 +93,6 @@ public class NonogramMakerModel {
 	}
 
 	public String toString() {
-
+		return NonogramMakerModel().toString();
 	}
 }
