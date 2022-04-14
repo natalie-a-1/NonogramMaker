@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.StringJoiner;
 
 public class NonogramMakerModel {
 
@@ -145,6 +144,6 @@ public class NonogramMakerModel {
 			nums = nums + System.lineSeparator();
 		}
 		
-		return nums; // return formatted string
+		return nums; 
 	}
 }
