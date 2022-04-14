@@ -73,7 +73,7 @@ public class NonogramMakerView {
 	}
 	
 	public void initButtons(int numRows, int numCols, int cellLength) {
-		
+		cellGridView.initButtons(numRows, numCols, cellLength);
 	}
 	
 	public ToggleButton getToggleButton(int row, int col) {
