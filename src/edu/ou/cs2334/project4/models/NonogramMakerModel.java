@@ -31,15 +31,16 @@ public class NonogramMakerModel {
 		Scanner scan = new Scanner(file);
 		numRows = scan.nextInt();
 		numCols = scan.nextInt();
-		for (int i = 0; i < (numRows + numCols); i++) {
+		for (int i = 0; i < (numRows + numCols + 1); i++) {
 			scan.nextLine();
 		}
 		this.grid = new boolean[this.numCols * this.numRows];
+		
 		for(int i = 0; i < numRows; i++) {
 			String line_input = scan.nextLine();
 			
 			for (int j = 0; j < line_input.length(); j++) {	
-				grid[i * numCols + j] = (line_input.charAt(i) == FILLED_CELL_CHAR);
+				grid[(numCols * i) + j] = (line_input.charAt(j) == FILLED_CELL_CHAR);
 			}
 			
 		}
