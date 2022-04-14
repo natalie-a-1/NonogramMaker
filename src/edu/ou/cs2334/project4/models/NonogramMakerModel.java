@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.StringJoiner;
 
 public class NonogramMakerModel {
 
@@ -62,7 +63,6 @@ public class NonogramMakerModel {
 	}
 
 	public int getNumRows() {
-//		int temp = this.numRows;
 		return numRows;
 	}
 
@@ -120,8 +120,11 @@ public class NonogramMakerModel {
 	}
 
 	public String toString() {
+		StringJoiner sj = new StringJoiner("", "", "");
 		List<Integer> temp = new ArrayList<Integer>();
 		Integer count = 0;
+		int counter = 0;
+		int rows = numRows;
 		String nums = numRows + " " + numCols + System.lineSeparator();
 		for (int i = 0; i < numRows; i++) {
 			temp = projectRow(i);
@@ -144,6 +147,21 @@ public class NonogramMakerModel {
 			nums = nums + System.lineSeparator();
 		}
 		
-		return nums; 
+		for (int i= 0; i < grid.length; i++) {
+			if (grid[i]) {
+				sj.add("1");
+			}
+			else if (!grid[i]) {
+				sj.add("0");
+			}
+			counter++;
+			
+			if (counter == rows && rows < (numRows*numCols)) {
+				sj.add(System.lineSeparator());
+				rows+=numRows;
+			}
+		}
+		
+		return nums+ sj; 
 	}
 }
