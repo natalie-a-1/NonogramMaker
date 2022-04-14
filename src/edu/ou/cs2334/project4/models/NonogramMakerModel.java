@@ -40,12 +40,6 @@ public class NonogramMakerModel {
 			
 			for (int j = 0; j < line_input.length(); j++) {	
 				grid[i * numCols + j] = (line_input.charAt(i) == FILLED_CELL_CHAR);
-//				if (line_input.charAt(i) == FILLED_CELL_CHAR) {
-//					this.grid[i*this.numCols + j] = true;
-//				}
-//				else {
-//					this.grid[i*this.numCols + j] = false;
-//				}
 			}
 			
 		}
@@ -69,6 +63,7 @@ public class NonogramMakerModel {
 	}
 
 	public int getNumRows() {
+//		int temp = this.numRows;
 		return numRows;
 	}
 
@@ -126,10 +121,30 @@ public class NonogramMakerModel {
 	}
 
 	public String toString() {
-//		StringJoiner sj = new StringJoiner(" ", "\n");
-//		sj.add(numRows);
-//		sj.add(numColumns);
+		List<Integer> temp = new ArrayList<Integer>();
+		Integer count = 0;
+		String nums = numRows + " " + numCols + System.lineSeparator();
+		for (int i = 0; i < numRows; i++) {
+			temp = projectRow(i);
+			count = temp.size();
+			
+			for (int j = 0; j < count-1; j++) {
+				nums = nums + temp.get(j) + " ";
+				
+			}
+			nums = nums + temp.get(count -1);
+			nums = nums + System.lineSeparator();
+		}
+		for (int i = 0; i < numCols; i++) {
+			temp = projectCol(i);
+			count = temp.size();
+			for (int j = 0; j < count-1; j++) {
+				nums = nums + temp.get(j) + " ";
+			}
+			nums = nums + temp.get(count-1);
+			nums = nums + System.lineSeparator();
+		}
 		
-		return null; // return formatted string
+		return nums; // return formatted string
 	}
 }
