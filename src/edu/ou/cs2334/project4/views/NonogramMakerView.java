@@ -10,6 +10,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
 public class NonogramMakerView {
@@ -23,9 +24,10 @@ public class NonogramMakerView {
 	public String MENU_ITEM_EXIT = "MENU_ITEM_EXIT";
 	
 	public NonogramMakerView(int numRows, int numCols, int cellLength) {
-		CellGridView cellGridView = new CellGridView(numRows, numCols, cellLength);
-		BorderPane borderPane = new BorderPane();
-//		borderPane.setCenter(cellGridView);
+		initMenuBar();
+		cellGridView = new CellGridView(numRows, numCols, cellLength);
+		borderPane = new BorderPane();
+		borderPane.setCenter(cellGridView.getPane());
 		borderPane.setTop(menubar);
 	}
 	private void initMenuBar() {
@@ -59,11 +61,7 @@ public class NonogramMakerView {
 			public void handle(ActionEvent event) {
 				Platform.exit();
 			}
-			
 		});
-		
-		//TODO: Instantiate the menuBar and add the File menu to the menuBar. 
-		//This will allow the File option to show up on the menuBar.
 	}
 	
 	public MenuItem getMenuItem(String name) {
@@ -76,20 +74,18 @@ public class NonogramMakerView {
 	
 	public void initButtons(int numRows, int numCols, int cellLength) {
 		cellGridView.initButtons(numRows, numCols, cellLength);
-		//TODO set the min/max/preferred size for each toggle button
-		
 	}
 	
 	public ToggleButton getToggleButton(int row, int col) {
-		//TODO Return the toggleButton at a given position using the cellGridView variable.
+		return cellGridView.getToggleButtons(row, col);
 	}
 	
 	public int getNumRow() {
-		//TODO Return the number of rows using the cellGridView variable
+		return cellGridView.getNumRows();
 	}
 	
 	public int getNumCols() {
-		//TODO Return the number of columns using the cellGridView variable.
+		return cellGridView.getNumCols();
 	}
 
 }

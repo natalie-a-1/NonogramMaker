@@ -19,7 +19,7 @@ public class CellGridView {
 	public CellGridView(int numRows, int numCols, int cellLength) {
 		this.numCols = numCols;
 		this.numRows = numRows;
-		GridPane gridPane = new GridPane();
+		gridPane = new GridPane();
 		gridPane.setGridLinesVisible(true);
 		
 		for (int i = 0; i < numCols; i++) {
@@ -39,6 +39,18 @@ public class CellGridView {
 	
 	public void initButtons(int numRows, int numCols, int cellLength) {
 		gridButtons.clear();
+		gridPane.getChildren().clear();
+		gridButtons.clear();
+		for (int i = 0; i < numRows * numCols; i++) {
+			ToggleButton temp = new ToggleButton();
+			gridButtons.add(temp);
+		}
+		
+		for(ToggleButton b: gridButtons) {
+			b.setMinSize(cellLength, cellLength);
+			b.setMaxSize(cellLength, cellLength);
+			b.setPrefSize(cellLength, cellLength);
+		}
 		
 	}
 	
@@ -51,6 +63,7 @@ public class CellGridView {
 	}
 	
 	public ToggleButton getToggleButtons(int row, int col) {
+		return this.gridButtons.get((row * numCols)+ col);
 		
 	}
 	

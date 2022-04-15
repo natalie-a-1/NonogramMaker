@@ -5,6 +5,7 @@ import java.util.List;
 import edu.ou.cs2334.project4.Presenter.NonogramMakerPresenter;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -19,9 +20,8 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		// TODO NEEDS TO BE FIXED 
 		List<String> parameters = getParameters().getUnnamed();
-		NonogramMakerPresenter nonogramMakerPresenter = new NonogramMakerPresenter(IDX_NUM_ROWS,IDX_NUM_COLS,IDX_CELL_SIZE);
+		NonogramMakerPresenter nonogramMakerPresenter = new NonogramMakerPresenter(Integer.parseInt(parameters.get(IDX_NUM_ROWS)),Integer.parseInt(parameters.get(IDX_NUM_COLS)),Integer.parseInt(parameters.get(IDX_CELL_SIZE)));
 		Scene scene = new Scene(nonogramMakerPresenter.getPane());
 		primaryStage.setScene(scene);
 		scene.getStylesheets().add("src/style.css");
