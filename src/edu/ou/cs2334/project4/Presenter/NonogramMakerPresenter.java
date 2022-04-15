@@ -6,11 +6,12 @@ import java.io.File;
 import edu.ou.cs2334.project4.interfaces.Openable;
 import edu.ou.cs2334.project4.interfaces.Saveable;
 import edu.ou.cs2334.project4.models.NonogramMakerModel;
-import edu.ou.cs2334.project4.views.NonogramMakeView;
+import edu.ou.cs2334.project4.views.NonogramMakerView;
+import javafx.scene.layout.Pane;
 
 public class NonogramMakerPresenter implements Saveable, Openable {
 	
-	private NonogramMakeView view;
+	private NonogramMakerView view;
 	private NonogramMakerModel model;
 	private int cellLength;
 	
@@ -19,7 +20,7 @@ public class NonogramMakerPresenter implements Saveable, Openable {
 	}
 	
 	public Pane getPane() {
-		
+		return null;
 	}
 
 	private Window getWindow() {
