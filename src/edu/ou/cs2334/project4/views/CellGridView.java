@@ -20,6 +20,7 @@ public class CellGridView {
 	}
 	
 	public void initButtons(int numRows, int numCols, int cellLength) {
+		gridButtons.clear();
 		
 	}
 	
