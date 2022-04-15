@@ -2,6 +2,7 @@ package edu.ou.cs2334.project4.models;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -48,7 +49,7 @@ public class NonogramMakerModel {
 	}
 
 	public NonogramMakerModel(String filename) throws FileNotFoundException {
-		new NonogramMakerModel(new File(filename));
+		this(new File(filename));
 	}
 
 	public boolean[] getGrid() {
