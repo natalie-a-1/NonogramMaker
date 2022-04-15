@@ -62,7 +62,8 @@ public class NonogramMakerModel {
 	public NonogramMakerModel(int numRows, int numCols) {
 		if (numRows <= 0 || numCols <= 0) {
 			throw new IllegalArgumentException();
-		} else {
+		} 
+		else {
 			this.numCols = numCols;
 			this.numRows = numRows;
 			this.grid = new boolean[this.numRows * this.numCols];
@@ -177,7 +178,8 @@ public class NonogramMakerModel {
 		for (int i = 0; i < cells.length; i++) {
 			if (cells[i] == true) {
 				count++;
-			} else if (cells[i] == false) {
+			} 
+			else if (cells[i] == false) {
 				if (count != 0) {
 					temp.add(count);
 				}
@@ -219,17 +221,11 @@ public class NonogramMakerModel {
 	 */
 
 	public List<Integer> projectCol(int colIdx) {
-		List<Boolean> temp = new ArrayList<Boolean>();
-		for (int i = 0; i < this.numCols * this.numRows; i++) {
-			if (i % numRows == 0) {
-				temp.add(this.grid[i + colIdx]);
-			}
+		boolean[] temp = new boolean[getNumRows()];
+		for (int i = 0; i < temp.length; i++) {
+			temp[i] = getCell(i, colIdx);
 		}
-		boolean[] tempo = new boolean[temp.size()];
-		for (int i = 0; i < temp.size(); i++) {
-			tempo[i] = temp.get(i);
-		}
-		return project(tempo);
+		return project(temp);
 	}
 
 	/**
@@ -259,7 +255,7 @@ public class NonogramMakerModel {
 		List<Integer> temp = new ArrayList<Integer>();
 		Integer count = 0;
 		int counter = 0;
-		int rows = numRows;
+		int cols = numCols;
 		String nums = numRows + " " + numCols + System.lineSeparator();
 		for (int i = 0; i < numRows; i++) {
 			temp = projectRow(i);
@@ -285,17 +281,17 @@ public class NonogramMakerModel {
 		for (int i = 0; i < grid.length; i++) {
 			if (grid[i]) {
 				sj.add("1");
-			} else if (!grid[i]) {
+			} 
+			else if (!grid[i]) {
 				sj.add("0");
 			}
 			counter++;
 
-			if (counter == rows && rows < (numRows * numCols)) {
+			if (counter == cols && cols < (numRows * numCols)) {
 				sj.add(System.lineSeparator());
-				rows += numRows;
+				cols += numCols;
 			}
 		}
-
 		return nums + sj;
 	}
 }
