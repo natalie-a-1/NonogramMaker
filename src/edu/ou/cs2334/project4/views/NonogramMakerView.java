@@ -76,6 +76,8 @@ public class NonogramMakerView {
 	
 	public void initButtons(int numRows, int numCols, int cellLength) {
 		cellGridView.initButtons(numRows, numCols, cellLength);
+		//TODO set the min/max/preferred size for each toggle button
+		
 	}
 	
 	public ToggleButton getToggleButton(int row, int col) {

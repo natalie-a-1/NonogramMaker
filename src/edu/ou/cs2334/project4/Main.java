@@ -1,5 +1,7 @@
 package edu.ou.cs2334.project4;
 
+import java.util.List;
+
 import edu.ou.cs2334.project4.Presenter.NonogramMakerPresenter;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -16,17 +18,16 @@ public class Main extends Application {
 	}
 
 	@Override
-	public void start(Stage arg0) throws Exception {
+	public void start(Stage primaryStage) throws Exception {
 		// TODO NEEDS TO BE FIXED 
-		getParameters();
-		NonogramMakerPresenter nonogramMakerPresenter = new NonogramMakerPresenter(10,10,10);
+		List<String> parameters = getParameters().getUnnamed();
+		NonogramMakerPresenter nonogramMakerPresenter = new NonogramMakerPresenter(IDX_NUM_ROWS,IDX_NUM_COLS,IDX_CELL_SIZE);
 		Scene scene = new Scene(nonogramMakerPresenter.getPane());
-		Stage stage = new Stage();
-		stage.setScene(scene);
-		scene.getStylesheets().add("style.css");
-		stage.setTitle("My first java app!");
-		stage.setResizable(false);
-		stage.show();
+		primaryStage.setScene(scene);
+		scene.getStylesheets().add("src/style.css");
+		primaryStage.setTitle("My first java app!");
+		primaryStage.setResizable(false);
+		primaryStage.show();
 	}
 
 }

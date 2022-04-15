@@ -7,6 +7,7 @@ import edu.ou.cs2334.project4.interfaces.Openable;
 import edu.ou.cs2334.project4.interfaces.Saveable;
 import edu.ou.cs2334.project4.models.NonogramMakerModel;
 import edu.ou.cs2334.project4.views.NonogramMakerView;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.Pane;
 
 public class NonogramMakerPresenter implements Saveable, Openable {
@@ -16,11 +17,13 @@ public class NonogramMakerPresenter implements Saveable, Openable {
 	private int cellLength;
 	
 	public NonogramMakerPresenter(int numRows, int numColumns, int cellLength) {
-		
+		NonogramMakerModel model = new NonogramMakerModel(numRows, numColumns);
+		this.cellLength = cellLength;
+		init();
 	}
 	
 	public Pane getPane() {
-		return null;
+		return view.getPane();
 	}
 
 	private Window getWindow() {
@@ -28,15 +31,20 @@ public class NonogramMakerPresenter implements Saveable, Openable {
 	}
 	
 	private void init() {
-		
+		initToggleButtons();
+		bindToggleButtons();
+		configureMenuItems();
 	}
 	
 	private void initToggleButtons() {
-		
+		view.initButtons(model.getNumRows(), model.getNumCols(), cellLength);
+		if (getWindow() != null) {
+			getWindow().sizeToScene();
+		}
 	}
 	
 	private void bindToggleButtons() {
-		
+		ToggleButton.s
 	}
 	
 	private void configureMenuItems() {

@@ -12,10 +12,18 @@ public class ToggleButtonEventHandler {
 	private int colIdx;
 	
 	public ToggleButtonEventHandler(NonogramMakerModel model, int rowIdx, int colIdx) {
+		this.rowIdx = rowIdx;
+		this.colIdx = colIdx;
+		this.model = model;
+		model.getCell(rowIdx, colIdx); //??
 	}
 	
 	public void Handle(ActionEvent event) {
-		ToggleGroup group = new ToggleGroup();
+		if (model.getCell(rowIdx, colIdx)) {
+			model.setCell(rowIdx, colIdx, false);
+		} else {
+			model.setCell(rowIdx, colIdx, true);
+		}
 	}
 
 }
