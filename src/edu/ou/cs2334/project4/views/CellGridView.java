@@ -1,13 +1,17 @@
+/**
+ * This class constructs each cell into a visible and 
+ * fully automated toggle button.
+ * 
+ * @author Natalie Hill
+ * @version 0.1
+ */
 package edu.ou.cs2334.project4.views;
 
 import java.util.ArrayList;
-
 import javafx.geometry.Pos;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.RowConstraints;
 
 public class CellGridView {
 
@@ -16,28 +20,30 @@ public class CellGridView {
 	private int numRows;
 	private int numCols;
 
+	/**
+	 * This is the constructor for a cell grid.
+	 * 
+	 * @param numRows    total number of rows in the grid
+	 * @param numCols    total number of columns in the grid
+	 * @param cellLength the length of each cell
+	 */
+
 	public CellGridView(int numRows, int numCols, int cellLength) {
 		this.numCols = numCols;
 		this.numRows = numRows;
 		gridPane = new GridPane();
 		gridPane.setMinSize(numRows, numCols);
-//		gridPane.setHgap(cellLength);
-//		gridPane.setGridLinesVisible(true);
-
-//		for (int i = 0; i < numCols; i++) {
-//			ColumnConstraints c = new ColumnConstraints();
-//			c.setPercentWidth(100/numCols);
-//			gridPane.getColumnConstraints().add(c);
-//		}
-//		for (int i = 0; i < numRows; i++) {
-//			RowConstraints r = new RowConstraints();
-//			r.setPercentHeight(100/numRows);
-//			gridPane.getRowConstraints().add(r);
-//		}
-
 		gridPane.setAlignment(Pos.CENTER);
 
 	}
+
+	/**
+	 * This method changes each cell into a toggle button.
+	 * 
+	 * @param numRows    the rows to search through
+	 * @param numCols    the columns to search through
+	 * @param cellLength the length of each cell
+	 */
 
 	public void initButtons(int numRows, int numCols, int cellLength) {
 		gridButtons.clear();
@@ -58,19 +64,44 @@ public class CellGridView {
 		}
 	}
 
+	/**
+	 * This method retrieves the total number of rows in the grid.
+	 * 
+	 * @return total number of rows in the grid
+	 */
+
 	public int getNumRows() {
 		return numRows;
 	}
 
+	/**
+	 * This method retrieves the total number of columns in the grid.
+	 * 
+	 * @return total number of columns in the grid
+	 */
+
 	public int getNumCols() {
 		return numCols;
 	}
+
+	/**
+	 * This method finds the specific toggle button to be returned.
+	 * 
+	 * @param row the row to be searched
+	 * @param col the column to be searched
+	 * @return the toggle button at an index in the grid
+	 */
 
 	public ToggleButton getToggleButtons(int row, int col) {
 		return this.gridButtons.get((row * numCols) + col);
 
 	}
 
+	/**
+	 * This method retrieves the whole gridPane.
+	 * 
+	 * @return the gridPane
+	 */
 	public Pane getPane() {
 		return gridPane;
 	}

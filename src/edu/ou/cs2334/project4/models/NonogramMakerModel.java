@@ -62,8 +62,7 @@ public class NonogramMakerModel {
 	public NonogramMakerModel(int numRows, int numCols) {
 		if (numRows <= 0 || numCols <= 0) {
 			throw new IllegalArgumentException();
-		} 
-		else {
+		} else {
 			this.numCols = numCols;
 			this.numRows = numRows;
 			this.grid = new boolean[this.numRows * this.numCols];
@@ -178,8 +177,7 @@ public class NonogramMakerModel {
 		for (int i = 0; i < cells.length; i++) {
 			if (cells[i] == true) {
 				count++;
-			} 
-			else if (cells[i] == false) {
+			} else if (cells[i] == false) {
 				if (count != 0) {
 					temp.add(count);
 				}
@@ -281,8 +279,7 @@ public class NonogramMakerModel {
 		for (int i = 0; i < grid.length; i++) {
 			if (grid[i]) {
 				sj.add("1");
-			} 
-			else if (!grid[i]) {
+			} else if (!grid[i]) {
 				sj.add("0");
 			}
 			counter++;

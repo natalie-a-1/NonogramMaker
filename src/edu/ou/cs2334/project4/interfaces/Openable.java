@@ -1,3 +1,7 @@
+/**
+ * This is an interface that openHandler can use.
+ */
+
 package edu.ou.cs2334.project4.interfaces;
 
 import java.io.File;
