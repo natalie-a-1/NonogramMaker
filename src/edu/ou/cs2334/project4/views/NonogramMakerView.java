@@ -46,7 +46,7 @@ public class NonogramMakerView {
 		menu.getItems().add(exit);
 		
 		//creating menu bar
-		MenuBar menubar = new MenuBar();
+		menubar = new MenuBar();
 		
 		//adding menu to menubar
 		menubar.getMenus().addAll(menu);
