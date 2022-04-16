@@ -1,10 +1,9 @@
 package edu.ou.cs2334.project4.interfaces;
 
 import java.io.File;
+import java.io.IOException;
 
 public interface Openable {
 
-	private void open(File file) {
-		
-	}
+	void open(File file) throws IOException;
 }

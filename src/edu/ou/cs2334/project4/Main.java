@@ -3,8 +3,10 @@ package edu.ou.cs2334.project4;
 import java.util.List;
 
 import edu.ou.cs2334.project4.Presenter.NonogramMakerPresenter;
+import edu.ou.cs2334.project4.views.NonogramMakerView;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -28,6 +30,7 @@ public class Main extends Application {
 		primaryStage.setTitle("My first java app!");
 		primaryStage.setResizable(false);
 		primaryStage.show();
+		
 	}
 
 }

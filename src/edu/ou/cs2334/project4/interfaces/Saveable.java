@@ -1,8 +1,10 @@
 package edu.ou.cs2334.project4.interfaces;
 
+import java.io.File;
+import java.io.IOException;
+
 public interface Saveable {
 
-	private void save(String filename) {
-		
-	}
+	void save(String filename) throws IOException;
+	
 }

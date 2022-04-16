@@ -19,9 +19,9 @@ public class NonogramMakerView {
 	private MenuBar menubar;
 	private CellGridView cellGridView;
 	private HashMap<String, MenuItem> menuItemsMap = new HashMap<String, MenuItem>();
-	public String MENU_ITEM_OPEN = "MENU_ITEM_OPEN";
-	public String MENU_ITEM_SAVE = "MENU_ITEM_SAVE";
-	public String MENU_ITEM_EXIT = "MENU_ITEM_EXIT";
+	public static String MENU_ITEM_OPEN = "MENU_ITEM_OPEN";
+	public static String MENU_ITEM_SAVE = "MENU_ITEM_SAVE";
+	public static String MENU_ITEM_EXIT = "MENU_ITEM_EXIT";
 	
 	public NonogramMakerView(int numRows, int numCols, int cellLength) {
 		initMenuBar();

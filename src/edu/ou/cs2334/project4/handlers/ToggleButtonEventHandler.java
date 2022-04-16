@@ -1,9 +1,9 @@
 package edu.ou.cs2334.project4.handlers;
 
-import java.awt.event.ActionEvent;
 
 import edu.ou.cs2334.project4.models.NonogramMakerModel;
-import javafx.scene.control.ToggleGroup;
+import javafx.event.ActionEvent;
+import javafx.scene.control.ToggleButton;
 
 public class ToggleButtonEventHandler {
 	
@@ -15,15 +15,11 @@ public class ToggleButtonEventHandler {
 		this.rowIdx = rowIdx;
 		this.colIdx = colIdx;
 		this.model = model;
-		model.getCell(rowIdx, colIdx); //??
 	}
 	
-	public void Handle(ActionEvent event) {
-		if (model.getCell(rowIdx, colIdx)) {
-			model.setCell(rowIdx, colIdx, false);
-		} else {
-			model.setCell(rowIdx, colIdx, true);
-		}
+	public void handle(ActionEvent event) {
+		ToggleButton temp = (ToggleButton)event.getSource();
+		model.setCell(rowIdx, colIdx, temp.isSelected());
 	}
 
 }
