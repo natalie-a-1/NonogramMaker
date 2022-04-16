@@ -59,13 +59,7 @@ public class NonogramMakerPresenter implements Saveable, Openable {
 		for (int i = 0; i < model.getNumRows(); i++) {
 			for (int j = 0; j < model.getNumCols(); j++) {
 				view.getToggleButton(i, j).setSelected(model.getCell(i, j));
-//				var temp = model.getCell(i, j);
-//				view.getToggleButton(i, j).addEventHandler(, null);;
-				
-//				view.getToggleButton(i, j).setOnAction(new ToggleButtonEventHandler(model, i, j));
-				//view.getToggleButton(i, j).setOnAction(new EventHandler<ActionEvent>() {
-					
-			//	});
+				view.getToggleButton(i, j).setOnAction(new ToggleButtonEventHandler(model, i, j));				
 			}
 		}
 	}

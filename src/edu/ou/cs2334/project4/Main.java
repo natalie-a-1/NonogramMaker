@@ -26,8 +26,8 @@ public class Main extends Application {
 		NonogramMakerPresenter nonogramMakerPresenter = new NonogramMakerPresenter(Integer.parseInt(parameters.get(IDX_NUM_ROWS)),Integer.parseInt(parameters.get(IDX_NUM_COLS)),Integer.parseInt(parameters.get(IDX_CELL_SIZE)));
 		Scene scene = new Scene(nonogramMakerPresenter.getPane());
 		primaryStage.setScene(scene);
-		scene.getStylesheets().add("src/style.css");
-		primaryStage.setTitle("My first java app!");
+		scene.getStylesheets().add("style.css");
+		primaryStage.setTitle("My first java app!"); //CHANGE NAME
 		primaryStage.setResizable(false);
 		primaryStage.show();
 		
