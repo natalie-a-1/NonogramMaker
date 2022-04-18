@@ -2,7 +2,7 @@
  * This class uses components from the both the NonogramMakerModel and
  * the NonogramMakerView to create a display for the nonogram. 
  * 
- * @author Natalie Hill
+ * @author Collaboration of Natalie Hill and Keon Moradi
  * @version 0.1
  */
 

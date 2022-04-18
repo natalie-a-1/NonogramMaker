@@ -1,12 +1,13 @@
 /**
  * This is an abstract class that handles the task of saving the dialog.
  * 
- * @author Natalie Hill
+ * @author Collaboration of Natalie Hill and Keon Moradi
  * @version 0.1
  */
 
 package edu.ou.cs2334.project4.handlers;
 
+import java.io.File;
 import java.io.IOException;
 import edu.ou.cs2334.project4.interfaces.Saveable;
 import javafx.event.ActionEvent;
@@ -40,10 +41,11 @@ public class SaveHandler extends AbstractBaseHandler implements EventHandler<Act
 	 */
 
 	public void handle(ActionEvent event) {
-		super.fileChooser.showOpenDialog(window);
-		if (super.fileChooser.showOpenDialog(window) != null) {
+		File temp = super.fileChooser.showOpenDialog(window);
+		String tempo = super.fileChooser.getInitialFileName();
+		if (temp != null) {
 			try {
-				saver.save(super.fileChooser.getInitialFileName());
+				saver.save(tempo);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

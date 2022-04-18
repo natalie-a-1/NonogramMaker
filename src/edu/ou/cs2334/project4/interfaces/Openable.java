@@ -1,5 +1,8 @@
 /**
  * This is an interface that openHandler can use.
+ * 
+ * @auhtor Collaboration of Natalie Hill and Keon Moradi
+ * @version 0.1
  */
 
 package edu.ou.cs2334.project4.interfaces;

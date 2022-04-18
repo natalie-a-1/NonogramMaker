@@ -1,7 +1,7 @@
 /**
  * This class decides the state of a toggle button at a given moment.
  * 
- * @author Natalie Hill
+ * @author Collaboration of Natalie Hill and Keon Moradi
  * @version 0.1
  */
 

@@ -1,8 +1,8 @@
 /*
  * This is the NonogramMakerModel class. It is designed to create a model NonogramMaker
- * with a file, string  or just by entering the number of rows and coumns. 
+ * with a file, string  or just by entering the number of rows and columns. 
  * 
- * @author Natalie Hill
+ * @author Collaboration of Natalie Hill and Keon Moradi
  * @version 0.1
  * 
  */

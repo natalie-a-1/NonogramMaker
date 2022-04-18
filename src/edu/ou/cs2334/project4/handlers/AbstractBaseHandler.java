@@ -1,7 +1,7 @@
 /**
  * This class represents a general handler involving file selection.
  * 
- * @author Natalie Hill
+ * @author Collaboration of Natalie Hill and Keon Moradi
  * @version 0.1
  */
 
