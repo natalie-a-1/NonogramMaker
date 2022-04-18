@@ -42,10 +42,9 @@ public class SaveHandler extends AbstractBaseHandler implements EventHandler<Act
 
 	public void handle(ActionEvent event) {
 		File temp = super.fileChooser.showSaveDialog(window);
-		String tempo = super.fileChooser.getInitialFileName();
 		if (temp != null) {
 			try {
-				saver.save(tempo.toString());
+				saver.save(temp.toString());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

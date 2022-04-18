@@ -46,13 +46,15 @@ public class CellGridView {
 	 */
 
 	public void initButtons(int numRows, int numCols, int cellLength) {
+		this.numRows = numRows;
+		this.numCols = numCols;
 		gridButtons.clear();
 		gridPane.getChildren().clear();
 
 		for (int j = 0; j < numRows; j++) {
 			for (int i = 0; i < numCols; i++) {
 				ToggleButton temp = new ToggleButton();
-				gridPane.add(temp, j, i);
+				gridPane.add(temp, i, j);
 				gridButtons.add(temp);
 			}
 		}

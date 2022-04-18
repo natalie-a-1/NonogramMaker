@@ -104,6 +104,7 @@ public class NonogramMakerPresenter implements Saveable, Openable {
 
 	public void open(File file) throws FileNotFoundException {
 		model = new NonogramMakerModel(file);
+		init();
 	}
 
 	/**
