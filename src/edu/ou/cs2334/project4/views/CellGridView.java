@@ -1,10 +1,3 @@
-/**
- * This class constructs each cell into a visible and 
- * fully automated toggle button.
- * 
- * @author Natalie Hill
- * @version 0.1
- */
 package edu.ou.cs2334.project4.views;
 
 import java.util.ArrayList;
@@ -13,6 +6,13 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
+/**
+ * This class constructs each cell into a visible and 
+ * fully automated toggle button.
+ * 
+ * @author Collaboration of Natalie Hill and Keon Moradi
+ * @version 0.1
+ */
 public class CellGridView {
 
 	private ArrayList<ToggleButton> gridButtons = new ArrayList<ToggleButton>();
@@ -27,7 +27,6 @@ public class CellGridView {
 	 * @param numCols    total number of columns in the grid
 	 * @param cellLength the length of each cell
 	 */
-
 	public CellGridView(int numRows, int numCols, int cellLength) {
 		this.numCols = numCols;
 		this.numRows = numRows;
@@ -44,7 +43,6 @@ public class CellGridView {
 	 * @param numCols    the columns to search through
 	 * @param cellLength the length of each cell
 	 */
-
 	public void initButtons(int numRows, int numCols, int cellLength) {
 		this.numRows = numRows;
 		this.numCols = numCols;
@@ -71,7 +69,6 @@ public class CellGridView {
 	 * 
 	 * @return total number of rows in the grid
 	 */
-
 	public int getNumRows() {
 		return numRows;
 	}
@@ -81,7 +78,6 @@ public class CellGridView {
 	 * 
 	 * @return total number of columns in the grid
 	 */
-
 	public int getNumCols() {
 		return numCols;
 	}
@@ -93,7 +89,6 @@ public class CellGridView {
 	 * @param col the column to be searched
 	 * @return the toggle button at an index in the grid
 	 */
-
 	public ToggleButton getToggleButtons(int row, int col) {
 		return this.gridButtons.get((row * numCols) + col);
 

@@ -1,10 +1,3 @@
-/**
- * This is an abstract class that handles the task of saving the dialog.
- * 
- * @author Collaboration of Natalie Hill and Keon Moradi
- * @version 0.1
- */
-
 package edu.ou.cs2334.project4.handlers;
 
 import java.io.File;
@@ -15,6 +8,12 @@ import javafx.event.EventHandler;
 import javafx.stage.FileChooser;
 import javafx.stage.Window;
 
+/**
+ * This is an abstract class that handles the task of saving the dialog.
+ * 
+ * @author Collaboration of Natalie Hill and Keon Moradi
+ * @version 0.1
+ */
 public class SaveHandler extends AbstractBaseHandler implements EventHandler<ActionEvent> {
 
 	private Saveable saver;
@@ -26,7 +25,6 @@ public class SaveHandler extends AbstractBaseHandler implements EventHandler<Act
 	 * @param fileChooser object that chooser a file
 	 * @param saver       object that saves the file
 	 */
-
 	public SaveHandler(Window window, FileChooser fileChooser, Saveable saver) {
 		super(window, fileChooser);
 		this.saver = saver;
@@ -39,7 +37,6 @@ public class SaveHandler extends AbstractBaseHandler implements EventHandler<Act
 	 * 
 	 * @param event an ActionEvent that handles opening
 	 */
-
 	public void handle(ActionEvent event) {
 		File temp = super.fileChooser.showSaveDialog(window);
 		if (temp != null) {

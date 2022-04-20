@@ -1,11 +1,3 @@
-/**
- * This class uses components from the both the NonogramMakerModel and
- * the NonogramMakerView to create a display for the nonogram. 
- * 
- * @author Collaboration of Natalie Hill and Keon Moradi
- * @version 0.1
- */
-
 package edu.ou.cs2334.project4.presenters;
 
 import java.io.File;
@@ -22,6 +14,13 @@ import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Window;
 
+/**
+ * This class uses components from the both the NonogramMakerModel and
+ * the NonogramMakerView to create a display for the nonogram. 
+ * 
+ * @author Collaboration of Natalie Hill and Keon Moradi
+ * @version 0.1
+ */
 public class NonogramMakerPresenter implements Saveable, Openable {
 
 	private NonogramMakerView view;
@@ -35,7 +34,6 @@ public class NonogramMakerPresenter implements Saveable, Openable {
 	 * @param numColumns total columns in the nonogram
 	 * @param cellLength the length of each cell in the nonogram
 	 */
-
 	public NonogramMakerPresenter(int numRows, int numColumns, int cellLength) {
 		view = new NonogramMakerView(numRows, numColumns, cellLength);
 		model = new NonogramMakerModel(numRows, numColumns);
@@ -48,7 +46,6 @@ public class NonogramMakerPresenter implements Saveable, Openable {
 	 * 
 	 * @return returns the pane from NonogramMakerView
 	 */
-
 	public Pane getPane() {
 		return view.getPane();
 	}
@@ -101,7 +98,6 @@ public class NonogramMakerPresenter implements Saveable, Openable {
 	 * @throws FileNotFoundException exception is thrown if the file can not be
 	 *                               found
 	 */
-
 	public void open(File file) throws FileNotFoundException {
 		model = new NonogramMakerModel(file);
 		init();
@@ -110,11 +106,10 @@ public class NonogramMakerPresenter implements Saveable, Openable {
 	/**
 	 * This method saves the contents of the nonogram to a file.
 	 * 
-	 * @param String name of the file to be saved to
+	 * @param filename name of the file to be saved to
 	 * @throws FileNotFoundException exception is thrown if the file can not be
 	 *                               found
 	 */
-
 	public void save(String filename) throws FileNotFoundException {
 		this.model.saveToFile(filename);
 	}

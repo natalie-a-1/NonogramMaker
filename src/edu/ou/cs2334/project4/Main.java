@@ -1,10 +1,3 @@
-/**
- * This class runs the nongram.
- * 
- * @author Natalie Hill
- * @version 0.1
- */
-
 package edu.ou.cs2334.project4;
 
 import java.util.List;
@@ -13,6 +6,12 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * This class runs the nongram.
+ * 
+ * @author Collaboration of Natalie Hill and Keon Moradi
+ * @version 0.1
+ */
 public class Main extends Application {
 
 	private static int IDX_NUM_COLS = 1;
@@ -24,7 +23,6 @@ public class Main extends Application {
 	 * 
 	 * @param args Arguments to run the program
 	 */
-
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -34,7 +32,6 @@ public class Main extends Application {
 	 * 
 	 * @param primaryStage the stage to display the program
 	 */
-
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		List<String> parameters = getParameters().getUnnamed();

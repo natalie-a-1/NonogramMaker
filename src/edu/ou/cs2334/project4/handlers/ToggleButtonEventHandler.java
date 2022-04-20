@@ -1,10 +1,3 @@
-/**
- * This class decides the state of a toggle button at a given moment.
- * 
- * @author Collaboration of Natalie Hill and Keon Moradi
- * @version 0.1
- */
-
 package edu.ou.cs2334.project4.handlers;
 
 import edu.ou.cs2334.project4.models.NonogramMakerModel;
@@ -12,6 +5,12 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.ToggleButton;
 
+/**
+ * This class decides the state of a toggle button at a given moment.
+ * 
+ * @author Collaboration of Natalie Hill and Keon Moradi
+ * @version 0.1
+ */
 public class ToggleButtonEventHandler implements EventHandler<ActionEvent> {
 
 	private NonogramMakerModel model;
